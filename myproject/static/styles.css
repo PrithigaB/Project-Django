@@ -1,0 +1,202 @@
+/* =====================
+   RESET & BASE
+===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f6f8;
+    text-align: center;
+}
+
+/* =====================
+   NAVBAR
+===================== */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    padding: 20px 40px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.logo h1 {
+    color: white;
+    font-size: 45px;
+    font-style: italic;
+    text-shadow: 2px 2px 6px rgba(0,255,204,0.6);
+}
+
+.links {
+    display: flex;
+    gap: 60px;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.links a:hover {
+    color: #00ffcc;
+    border-bottom: 2px solid #00ffcc;
+}
+
+/* =====================
+   HEADINGS
+===================== */
+h2 {
+    margin: 20px 0 10px;
+    color: #333;
+}
+
+h3 {
+    margin: 10px 0;
+    color: #444;
+}
+
+/* =====================
+   TASK CONTAINER
+===================== */
+center {
+    margin-top: 20px;
+}
+
+/* Each task block */
+h2, h3 {
+    background: white;
+    padding: 10px;
+    margin: 10px auto;
+    width: 70%;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* =====================
+   BUTTON LINKS
+===================== */
+a {
+    display: inline-block;
+    margin: 6px 5px;
+    padding: 6px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+/* Default action */
+a[href*="update"],
+a[href*="complete_"],
+a[href*="complete_all"] {
+    background-color: #007bff;
+}
+
+a[href*="update"]:hover,
+a[href*="complete_"]:hover,
+a[href*="complete_all"]:hover {
+    background-color: #0056b3;
+}
+
+/* DELETE buttons */
+a[href*="delete"] {
+    background-color: #dc3545;
+}
+
+a[href*="delete"]:hover {
+    background-color: #b52a37;
+}
+
+/* RESTORE buttons */
+a[href*="restore"] {
+    background-color: #ffc107;
+    color: black;
+}
+
+a[href*="restore"]:hover {
+    background-color: #e0a800;
+}
+
+/* DELETE ALL buttons */
+a[href*="delete_all"],
+a[href*="complete_deleteall"] {
+    background-color: #6f42c1;
+}
+
+a[href*="delete_all"]:hover,
+a[href*="complete_deleteall"]:hover {
+    background-color: #59339d;
+}
+
+/* =====================
+   FORMS
+===================== */
+form {
+    margin-top: 20px;
+}
+
+form label {
+    font-size: 18px;
+    display: block;
+    margin-top: 10px;
+}
+
+form input {
+    padding: 8px;
+    width: 260px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+}
+
+form button {
+    margin-top: 15px;
+    padding: 8px 20px;
+    background-color: plum;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: purple;
+    color: white;
+}
+
+/* =====================
+   COMPLETE & TRASH LOOK
+===================== */
+.completed {
+    text-decoration: line-through;
+    color: green;
+}
+
+.trash {
+    text-decoration: line-through;
+    color: red;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 768px) {
+    h2, h3 {
+        width: 90%;
+    }
+
+    .links {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+}
+
+

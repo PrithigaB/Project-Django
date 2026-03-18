@@ -1,0 +1,29 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<h2 class="page-title">Task Manager</h2>
+
+<div class="actions">
+    <a href="{% url 'delete_all' %}" class="btn danger">Delete All</a>
+    <a href="{% url 'complete_all' %}" class="btn success">Complete All</a>
+</div>
+
+<div class="todo-list">
+    {% for i in data %}
+        <div class="todo-item">
+            <div class="todo-text">
+                <h3>{{ i.title }}</h3>
+                <p>{{ i.desc }}</p>
+            </div>
+
+            <div class="todo-actions">
+                <a href="{% url 'update' i.id %}" class="btn">Edit</a>
+                <a href="{% url 'delete' i.id %}" class="btn danger">Delete</a>
+                <a href="{% url 'complete_' i.id %}" class="btn success">Complete</a>
+            </div>
+        </div>
+    {% empty %}
+        <p class="empty">No tasks yet 🎉</p>
+    {% endfor %}
+</div>
+{% endblock %}

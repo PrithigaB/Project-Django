@@ -1,0 +1,21 @@
+{% extends 'main.html' %}
+
+
+
+{% block content %}
+    <br><h2>WELCOME TO UPDATE PAGE</h2><br>
+    <center>
+        <form action="" method="POST">
+        {% csrf_token %}
+
+        <label for="">Title:</label>
+        <input type="text" name="title" id="" value="{{data.title}}"><br><br>
+
+        <label for="">DESC:</label>
+        <input type="title" name="desc" id="" value="{{data.desc}}"><br><br>
+        
+        <button type="submit">SUBMIT</button>
+        </form>
+    </center>
+
+{% endblock %}
